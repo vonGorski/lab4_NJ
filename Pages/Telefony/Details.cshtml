@@ -1,0 +1,37 @@
+﻿@page
+@model lab44.Pages.Telefony.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Telefon</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefon.NAZWA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefon.NAZWA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefon.PRODUCENT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefon.PRODUCENT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefon.NRTEL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefon.NRTEL)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Telefon.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
